@@ -1,0 +1,121 @@
+<script>
+    document.querySelector('.content').style.display = "none";
+</script>
+<div class="row">
+    <div class="col s12 m7 l7">
+        <div class="row">
+            <div class="col s12 centralizar-hijos aparecer animacion-aparecer-para-moviles">
+                <img class="logueo-animacion logueo-animacion-movil"
+                    src="img/Logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m3 offset-m1 l3 offset-l1">
+        <div class="logueo-animacion logueo-animacion-para-moviles">
+            <div class="logueo white z-depth-4">
+                <div class="centralizar-hijos">
+                    Iniciar sesión
+                </div>
+                <div class="row">
+                    <div id="login" class="input-field col s12 l6 login">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="txtuseroremail" type="text" class="autocomplete"
+                            onfocus="quitaradvertenciainput('txtuseroremail')"
+                            onkeyup="this.value=filtrouseroremail(this.value)">
+                        <label for="txtuseroremail">Usuario/Email</label>
+                        <span id="spanuseroremail" class="helper-text" data-error="Error"
+                            data-success="Correcto"></span>
+                    </div>
+                    <div class="input-field col s12 l12 registro hide">
+                        <i class="material-icons prefix">email</i>
+                        <input id="txtemail" type="email" class="autocomplete"
+                            onfocus="quitaradvertenciainput('txtemail')"
+                            onkeyup="this.value=filtroemail(this.value),validarEmail(this.value)"
+                            oninput="validarEmail(this.value)">
+                        <label for="txtemail">Email</label>
+                        <span id="spanemail" class="helper-text" data-error="Email-Erróneo"
+                            data-success="Correcto"></span>
+                    </div>
+                    <div class="input-field col s12 l6 registro hide">
+                        <i class="material-icons prefix">person</i>
+                        <input id="txtuser" type="text" data-length="15" maxlength="15" class="autocomplete"
+                            onfocus="quitaradvertenciainput('txtuser')"
+                            oninput="this.value=filtronickenvivo(this.value)">
+                        <label id="textousuariooempresa" for="txtuser">Usuario</label>
+                        <span id="spannick" class="helper-text" data-error="Nombre de usuario muy corto"
+                            data-success="Usuario Correcto"></span>
+                    </div>
+
+                    <div class="input-field col s12 l6">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="txtpassword" autocomplete="" type="password" class=""
+                            onfocus="quitaradvertenciainput('txtpassword')"
+                            onkeyup="this.value=filtropass(this.value),password(this.value)"
+                            onblur="password(this.value)">
+                        <label for="txtpassword">Contraseña</label>
+                        <span id="spanpassword" class="helper-text" data-error="Contraseña corta"
+                            data-success="Correcto">(mayúsculas y minúsculas, números, _ @ # . * )</span>
+                    </div>
+                    <div id="divdecheck" class="col s10 offset-s2 hide" style="margin-top: -15px;margin-bottom: 20px;">
+                        <label>
+                            <input id="checkisempresaid" type="checkbox" class="filled-in" onclick="check()" />
+                            <span>Cuenta de empresa</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="centralizar-hijos">
+                    <div>
+                        <button id="btnLogin" style="width:90%" onclick="loginnormal()"
+                            class="btn disabled">Login</button>
+                        <div class="progress progreso">
+                            <div id="barrita" class="determinate width-0pc"></div>
+                        </div>
+                    </div>
+                    <button id="btnReturntoLogin" onclick="returntologin()" class="btn hide">Volver</button>
+                    <button id="btnLogout" onclick="logout()" class="btn hide">Logout</button>
+                    <button id="btnRegadapta" onclick="registroadapta()" class="btn">Ir a registro</button>
+                    <div>
+                        <button id="btnSignUp" style="width:90%" onclick="registro()"
+                            class="btn hide disabled">Registro</button>
+                        <div class="progress progreso">
+                            <div id="barritareg" class="determinate width-0pc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centralizar-hijos">
+                    <a class="modal-trigger" href="#modalloginempresa">Login para empresa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalloginempresa" class="modal">
+    <div class="modal-content">
+        <h4>Login empresa</h4>
+        <p></p>
+        <div class="input-field col s12 l6 registro">
+            <i class="material-icons prefix">person</i>
+            <input id="txtempresa" type="text" data-length="15" maxlength="15" class="autocomplete"
+                onfocus="quitaradvertenciainput('txtuser')" oninput="this.value=filtronickenvivo(this.value)">
+            <label for="txtempresa">Usuario</label>
+            <span id="spannick" class="helper-text" data-error="Nombre de usuario muy corto"
+                data-success="Usuario Correcto"></span>
+        </div>
+
+        <div class="input-field col s12 l6">
+            <i class="material-icons prefix">lock</i>
+            <input id="txtpasswordempresa" autocomplete="" type="password" class=""
+                onfocus="quitaradvertenciainput('txtpasswordempresa')"
+                onkeyup="this.value=filtropass(this.value),password(this.value)" onblur="password(this.value)">
+            <label for="txtpasswordempresa">Contraseña</label>
+            <span id="spanpasswordempresa" class="helper-text" data-error="Contraseña corta"
+                data-success="Correcto">(mayúsculas y minúsculas, números, _ @ # . * )</span>
+        </div>
+        <button class="btn" onclick="loginempresa()">Login</button>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+</div>
+<script type="text/javascript" src="js/logueo.js"></script>

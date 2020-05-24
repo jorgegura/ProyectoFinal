@@ -1,0 +1,29 @@
+<script>
+    document.querySelector('.content').style.display = "none";
+    var parteizquierda = document.getElementById('parteizquierda');
+    removeclass(parteizquierda, 'hide-on-med-and-down');
+    addclass(parteizquierda, 'hide');
+    var partederecha = document.getElementById('rellenardenegocio');
+    removeclass(partederecha, 'l10');
+</script>
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+<div id="contenido">
+    <div class="negocio">
+        <div class="row">
+            <form class="col s12">
+                <img src="img/mensaje.jpg" class="col s6 offset-s3">
+                <div class="row">
+                    <div class="input-field col s6 offset-s3 black-text">
+                        <input id="last_name" type="text" class="validate black">
+                        <label for="last_name">Mensaje</label>
+                        <button class="btn waves-effect purple lighten-3" type="submit" name="action">Enviar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/negocio.js"></script>

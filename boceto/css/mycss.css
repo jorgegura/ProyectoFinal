@@ -1,0 +1,364 @@
+.barrita::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px;
+}
+
+.barrita::-webkit-scrollbar-thumb {
+    background: #b3b3b39c !important;
+    border-radius: 5px !important;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.centralizar-hijos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrate {
+    margin-top: 20%;
+    margin-left: 46%;
+}
+
+@media only screen and (min-width: 600px) {
+    .aparecer {
+        animation-duration: 1.5s;
+        animation-name: slidein;
+        animation-fill-mode: forwards;
+    }
+
+    .logueo-animacion {
+        animation-name: desplazar-a-izquierda;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+    }
+
+    .aparecer-subtitulo {
+        opacity: 0;
+        animation-duration: 1.5s;
+        animation-name: slidein;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+
+}
+@media only screen and (min-width:991px) {
+    .rellenarnegocio-normal {
+        margin-top: -55px;
+    }
+}
+@media only screen and (max-width:992px) {
+    .rellenarnegocio-movil {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 601px) {
+
+
+    .boton-s {
+        position: relative;
+        top: 0px;
+        left: 33%
+    }
+
+    .logueo-animacion-para-moviles {
+        animation-name: gotop;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        position: relative;
+    }
+
+    .logueo-animacion-movil {
+        animation-name: encoger;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+        width: 80%;
+    }
+
+    .animacion-aparecer-subtitulo-para-moviles {
+        opacity: 0;
+        animation-duration: 1.5s;
+        animation-name: aparecereirseabackground;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .animacion-aparecer-para-moviles {
+        animation-duration: 1.5s;
+        animation-name: aparecereirseabackground;
+        animation-fill-mode: forwards;
+        position: relative;
+    }
+}
+
+.inicio {
+    background: #ffd000;
+}
+
+.logueo {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-name: slidein2;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*
+.show-on-extra-large{display:block !important}}@media only screen and (min-width: 993px)
+.show-on-large{display:block !important}}@media only screen and (min-width: 600px) and (max-width: 992px)
+.show-on-medium{display:block !important}}@media only screen and (max-width: 600px)
+.show-on-small{display:block !important}}@media only screen and (min-width: 601px)
+*/
+
+@keyframes slidein {
+    from {
+        margin-left: 30%;
+        margin-top: 10%;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 30%;
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes encoger {
+    from {
+        width: 80%;
+        transform: rotate(0deg);
+    }
+
+    to {
+        width: 40%;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes aparecereirseabackground {
+    from {
+        margin-top: 10%;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    to {
+        margin-top: 0%;
+        opacity: 1;
+        z-index: 0;
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        margin-top: 20%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes gotop {
+    from {
+        top: 0px;
+        z-index: 0;
+    }
+
+    to {
+        top: -50px;
+        z-index: 3;
+    }
+}
+
+@keyframes desplazar-a-izquierda {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: -50%;
+    }
+}
+
+div.divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-right: 5px;
+    margin-top: -20px;
+}
+
+.imgredessociales {
+    width: 55px;
+    margin: 5px;
+}
+
+.progreso {
+    width: 90%;
+    margin-top: -5px;
+    margin-bottom: 0px;
+    z-index: 2;
+}
+
+.width-0pc {
+    width: 0%;
+}
+
+.width-33pc {
+    width: 33%;
+}
+
+.width-50pc {
+    width: 50%;
+}
+
+.width-66pc {
+    width: 66%;
+}
+
+.width-100pc {
+    width: 100%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column;*/
+    overflow: hidden;
+}
+
+#map_canvas {
+    height: 100%
+}
+
+.nav {
+    /*     background-color: rgba(255, 255, 255, 0);
+ */
+    background-color: rgba(253, 253, 253, 0.288);
+}
+
+.imgnav {
+    width: 80px;
+    margin-left: 20px;
+}
+
+#userimg1 {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.imgsidenav {
+
+    height: 100%;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.contenedordeimg {
+    width: 90px;
+    height: 20px;
+}
+
+.fondoblanco {
+    background-color: rgba(255, 194, 194, 0.589);
+    height: 2000px;
+}
+
+#test-slider {
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.upperslider {
+    margin-top: 20px;
+}
+
+.barrabusqueda {
+    width: 100%;
+    margin-left: -11px;
+    margin-right: -11px;
+    position: fixed;
+    z-index: 3;
+    background-color: rgb(228, 140, 255);
+}
+
+.cards {
+    margin-top: 70px;
+    margin-bottom: -20px;
+    flex: 1 1 auto;
+}
+
+.fles {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.z-index2 {
+    z-index: 11;
+}
+
+.valoration {
+    width: 100%;
+}
+
+.valorations {
+    /* margin-right:-27px;*/
+    margin-top: 30px;
+
+}
+
+.boton {
+    width: 44px;
+    height: 40px;
+    background-color: white;
+    border-width: 0px;
+}
+
+.negocio {
+    margin-top: 65px;
+    margin-bottom: -50px;
+    flex: 1 1 auto;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.star:hover {
+    background-color: gold;
+}
+
+#horario {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}

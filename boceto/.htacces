@@ -1,0 +1,15 @@
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+<Files .js>
+Order allow,deny
+Deny from all
+</Files>
+<Limit GET HEAD POST>
+order allow,deny
+deny from 77.209.111.31
+allow from all
+</limit>
+RewriteEngine on
+RewriteRule .*\.(pdf|css|gif|png|bmp|js|json)$ - [F,NC]
